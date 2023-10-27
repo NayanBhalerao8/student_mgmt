@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_10_26_171354) do
+ActiveRecord::Schema.define(version: 2023_10_27_013445) do
 
   create_table "authors", force: :cascade do |t|
     t.string "name"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2023_10_26_171354) do
 
   create_table "courses", force: :cascade do |t|
     t.string "name"
-    t.string "description"
+    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -37,7 +37,10 @@ ActiveRecord::Schema.define(version: 2023_10_26_171354) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.date "date_of_birth"
-    t.string "address"
+    t.string "local_address"
+    t.string "permenant_address"
+    t.string "permanent_contact_number"
+    t.string "alternate_contact_number"
   end
 
 end

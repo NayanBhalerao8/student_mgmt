@@ -3,5 +3,11 @@
 <Strong>First Name: </strong><%= @student.first_name %><br>
 <Strong>Last Name: </strong><%= @student.last_name %><br>
 <Strong>Email: </strong><%= @student.email %><br>
+<Strong>Date Of Birth: </strong><%= @student.date_of_birth %><br>
+<Strong>Local Address: </strong><%= @student.local_address %><br>
+<Strong>Permanent Address: </strong><%= @student.permenant_address %><br>
+<Strong>Permanent Contact Number: </strong><%= @student.permanent_contact_number %><br>
+<Strong>Alternate Address: </strong><%= @student.alternate_contact_number %><br>
+
 
 <%= link_to 'Back', students_path %> | <%= link_to 'Edit', edit_student_path(@student) %>
