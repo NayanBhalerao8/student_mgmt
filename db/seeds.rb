@@ -19,3 +19,8 @@ student = Student.create(
     Student.create(first_name: "Student #{i+1}", last_name: "Lname #{i+1}", email: "student#{i+1}@gmail.com")
 end
 student.save
+
+# Student.all.each do |student|
+#     student.blogs.create(title:"new bloag",content: "some content")
+#     student.blogs.create(title:"new bloag 2",content: "some content 2")
+# end
