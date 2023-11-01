@@ -1,6 +1,10 @@
 class Student < ApplicationRecord
     has_many :blogs
     validates :first_name, :last_name, :email, presence: true
+    validates :email, uniqueness: true
+    validates :first_name, :last_name, length: {minimum:10, maximum:50}
+    validates :first_name, :last_name, format: { with: /\A[a-zA-Z]+\Z/, message: "only letters are allowed"}
+    
     has_and_belongs_to_many :courses
     has_many :student_projects
     has_many :projects, through: :student_projects
