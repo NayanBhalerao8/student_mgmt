@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :blogs
   resources :projects
   resources :courses
   root 'welcome#index'
