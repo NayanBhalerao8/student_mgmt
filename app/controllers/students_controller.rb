@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
     before_action :set_student, only: [:edit, :update, :show, :destroy]
-
+    helper_method :formatted_date
     def index 
         @students = Student.all
     end
@@ -53,4 +53,7 @@ class StudentsController < ApplicationController
         @student = Student.find(params[:id])
     end
 
+    def formatted_date(date)
+        date.strftime('%A, %b, %d,%Y') if date.present? 
+    end
 end
